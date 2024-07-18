@@ -29,14 +29,11 @@ public class CategoriaServicioImpl implements ICategoriaServicio {
 	@Override
 	public void actualizarCategoria(Categoria editarCategoria) {
 		try {
-			Categoria categoria = buscarId(editarCategoria.getIdCategoria());
-			categoria.setNombre(editarCategoria.getNombre());
-			categoria.setDescripcion(editarCategoria.getDescripcion());
 			
-			categoriaRepo.save(categoria);
+			categoriaRepo.save(editarCategoria);
 			
 		} catch (Exception e) {
-			
+			System.out.println("Error al actualizar");
 		}
 	}
 	@Override

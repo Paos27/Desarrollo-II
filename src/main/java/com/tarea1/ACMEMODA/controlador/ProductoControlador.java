@@ -48,6 +48,7 @@ public class ProductoControlador {
 		Productos productorecuperado= servicioProducto.buscarProductoId(idProducto);
 		model.addAttribute("nuevoProducto", productorecuperado);
 		return "/acmemoda/productos";
+		
 	}
 		
 //eliminar
